@@ -3,7 +3,7 @@ const seeMoreButton: HTMLElement | null = document.querySelector("button")
 
 const url: string = "https://api.punkapi.com/v2/beers";
 
-const fetchBeerAPI = async (): Promise<void> => {
+const fetchAllBeerAPI = async (): Promise<void> => {
     try {
         const response = await fetch(url);
 
@@ -14,8 +14,8 @@ const fetchBeerAPI = async (): Promise<void> => {
         const data = await response.json();
         console.log(data);
 
-        const beers = data
-        beers.forEach((beer: any) => {
+        const allbeers = data
+        allbeers.forEach((beer: any) => {
             beersNewPage(beer)
         });
 
@@ -26,7 +26,7 @@ const fetchBeerAPI = async (): Promise<void> => {
     }
 };
 
-fetchBeerAPI();
+fetchAllBeerAPI();
 
 const beersNewPage = (beer: any) => {
     seeMoreButton.addEventListener("click",() => {

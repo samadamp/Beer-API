@@ -7,10 +7,30 @@ body {
     margin: 0;
     font-family: "Quicksand";
 }
+.start-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 
 .button{
     padding: 20px;
     font-size: 60px;
+    border-radius: 10px;
+   
+}
+
+.xButton{
+    display: none;
+}
+
+.search-beer{
+margin-top: 10px;
+border-radius: 10px;
+width: 120px;
+height: 30px;
 }
 
 
