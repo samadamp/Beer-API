@@ -1,0 +1,40 @@
+body {
+    background: rgb(248, 250, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Quicksand";
+}
+
+
+.beer-card{
+    /* border: solid 2px rgb(0, 0, 0); */
+    box-shadow: 2px 2px;
+    border-radius: 6px 6px;
+    background-color: rgb(252, 252, 252);
+    width: 20rem;
+    height: 40rem;
+}
+
+.inside-beer-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    background-color: rgb(212, 211, 211);
+}
+
+h2{
+    margin-left: 30px;
+}
+button{
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.beer-bottle{
+    height: 350px;
+}
