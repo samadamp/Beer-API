@@ -5,9 +5,10 @@ const url = "https://api.punkapi.com/v2/beers/random"
 const allurl = "https://api.punkapi.com/v2/beers";
 
 const randomButton = document.querySelector("button")
-const beerContainer = document.querySelector(".beer-container");
+const beerCardContainer = document.querySelector(".beer-container");
 const closeButton = document.querySelector(".xButton")
 const inputField = document.querySelector(".search-beer")
+const beerContainer = document.querySelector(".ourbeers-container")
 const beersResultContainer = document.querySelector(".ourbeers-container__result")
 
 
@@ -58,23 +59,25 @@ const randomBeer = (beer) => {
     randomButton.addEventListener("click", () => {
         randomButton.style.display = "none"
         inputField.style.display = "none"
-        beerContainer.style.boxShadow = "2px 2px 2px 2px"
-        beerContainer.style.backgroundColor = "white"
-        beerContainer.style.display = "flex"
-        beerContainer.style.width = "320px";
-        beerContainer.style.height = "700px";
-        beerContainer.style.justifyContent = "center"
-        beerContainer.style.alignItems = "center"
-        beerContainer.style.flexDirection = "column"
+        beersResultContainer.style.display = "none"
+        beerContainer.style.display = "none"
+        beerCardContainer.style.boxShadow = "2px 2px 2px 2px"
+        beerCardContainer.style.backgroundColor = "white"
+        beerCardContainer.style.display = "flex"
+        beerCardContainer.style.width = "320px";
+        beerCardContainer.style.height = "700px";
+        beerCardContainer.style.justifyContent = "center"
+        beerCardContainer.style.alignItems = "center"
+        beerCardContainer.style.flexDirection = "column"
 
-        beerContainer.innerHTML =
+        beerCardContainer.innerHTML =
             `<img src="${beer.image_url}" alt="${beer.name}" style="width: 140px; height: auto;" />
         <h2>${beer.name}</h2>
-        <button>See More > </button>`;
+        <a href="http://127.0.0.1:5500/dist/seemorepage.html">See More ></a>`;
 
         closeButton.style.display = "block"
         closeButton.style.marginTop = "15px"
-        beerContainer.appendChild(closeButton);
+        beerCardContainer.appendChild(closeButton);
         closeButton.addEventListener("click", () => {
             window.location.reload();
         })

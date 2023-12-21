@@ -1,4 +1,4 @@
-const seeMoreButton: HTMLElement | null = document.querySelector("button")
+
 
 
 const url: string = "https://api.punkapi.com/v2/beers";
@@ -28,9 +28,3 @@ const fetchAllBeerAPI = async (): Promise<void> => {
 
 fetchAllBeerAPI();
 
-const beersNewPage = (beer: any) => {
-    seeMoreButton.addEventListener("click",() => {
-        console.log(beer.ingredients)
-        
-    } )
-}
